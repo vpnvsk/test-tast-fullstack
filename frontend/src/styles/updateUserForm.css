@@ -1,0 +1,46 @@
+.error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .button-space {
+    margin-right: 10px; 
+}
+
+form {
+    margin: 10;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 6px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 8px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .button-space {
+    margin-right: 10px;
+  }
+    

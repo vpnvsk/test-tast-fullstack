@@ -11,7 +11,7 @@ COPY . /app
 RUN go mod download
 
 # Build the backend application
-RUN go build src/main .
+RUN go build cmd/main.go 
 
 # Expose the port that the application will run on
 EXPOSE 8000

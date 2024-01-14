@@ -1,4 +1,4 @@
-module github.com/vpnvsk/test-task-fullstack/backend
+module backend
 
 go 1.21
 

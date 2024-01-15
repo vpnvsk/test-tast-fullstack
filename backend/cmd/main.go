@@ -1,15 +1,21 @@
 package main
 
 import (
-	"backend/internal/server"
-	"backend/pkg/handler"
-	"backend/pkg/repository"
 	"context"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/internal/server"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/pkg/handler"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/pkg/repository"
 	"os"
 	"os/signal"
 	"syscall"
 )
 
+// @title Test-task Backend
+// @version 1.0
+// @description API Server for test-task
+
+// @host localhost:8000
+// @BasePath /
 func main() {
 
 	db := repository.NewInMemoryDB()

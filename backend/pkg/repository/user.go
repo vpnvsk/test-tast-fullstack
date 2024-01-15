@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"backend/internal/models"
 	"errors"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/internal/models"
 )
 
 var IndexOutOfRange = errors.New("index out of range")

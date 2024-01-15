@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"backend/internal/models"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/internal/models"
 )
 
 type Users interface {

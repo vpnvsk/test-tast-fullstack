@@ -15,7 +15,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchUsers();
+    fetchUsers()
   }, []);
 
   const fetchUsers = async () => {

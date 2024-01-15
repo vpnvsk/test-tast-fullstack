@@ -2,6 +2,8 @@ package models
 
 import "errors"
 
+var InvalidRequest = errors.New("invalid request")
+
 type User struct {
 	Id      int    `json:"id"`
 	Name    string `json:"name"`
@@ -16,8 +18,11 @@ type UserUpdate struct {
 }
 
 func (i UserUpdate) Validate() error {
-	if i.Name == nil && i.Age == nil && i.Surname == nil && *i.Age < 1 {
-		return errors.New("invalid request")
+	if i.Name == nil && i.Age == nil && i.Surname == nil {
+		return InvalidRequest
+	}
+	if i.Age != nil && *i.Age < 1 {
+		return InvalidRequest
 	}
 	return nil
 }

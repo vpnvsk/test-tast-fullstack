@@ -1,9 +1,12 @@
 package handler
 
 import (
-	"backend/pkg/repository"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	_ "github.com/vpnvsk/test-tast-fullstack/tree/main/backend/docs"
+	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/pkg/repository"
 )
 
 type Handler struct {
@@ -17,7 +20,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.Default()
 	router.Use(cors.Default())
 
-	//router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	router.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	api := router.Group("/api")
 	{
 		user := api.Group("/user")

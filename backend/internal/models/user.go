@@ -12,9 +12,9 @@ type User struct {
 }
 
 type UserUpdate struct {
-	Name    *string `json:"name" binding:"required"`
-	Surname *string `json:"surname" binding:"required"`
-	Age     *int    `json:"age" binding:"required"`
+	Name    *string `json:"name" `
+	Surname *string `json:"surname" `
+	Age     *int    `json:"age" `
 }
 
 func (i UserUpdate) Validate() error {

@@ -44,44 +44,52 @@ const UpdateUserForm = ({ user, onSubmit, onCancel }) => {
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <label>Name:</label>
-      <input
-        type="text"
-        name="name"
-        value={updatedUser.name}
-        onChange={handleInputChange}
-      />
-      <div className="error-message">{errors.name}</div>
+    return (
+        <form data-testid="update-user-form" onSubmit={handleSubmit}>
+            <label htmlFor="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                value={updatedUser.name}
+                onChange={handleInputChange}
+                data-testid="name"
+            />
+            <div className="error-message" data-testid="name-error">{errors.name}</div>
 
-      <label>Surname:</label>
-      <input
-        type="text"
-        name="surname"
-        value={updatedUser.surname}
-        onChange={handleInputChange}
-      />
-      <div className="error-message">{errors.surname}</div>
+            <label htmlFor="surname">Surname:</label>
+            <input
+                type="text"
+                id="surname"
+                name="surname"
+                value={updatedUser.surname}
+                onChange={handleInputChange}
+                data-testid="surname"
+            />
+            <div className="error-message" data-testid="surname-error">{errors.surname}</div>
 
-      <label>Age:</label>
-      <input
-        type="number"
-        name="age"
-        value={updatedUser.age}
-        onChange={handleInputChange}
-      />
-      <div className="error-message">{errors.age}</div>
+            <label htmlFor="age">Age:</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                value={updatedUser.age}
+                onChange={handleInputChange}
+                data-testid="age"
+            />
+            <div className="error-message" data-testid="age-error">{errors.age}</div>
 
-      <div className="button-group">
-        <button type="submit">Update User</button>
-        <span className="button-space"></span>
-        <button type="button" onClick={onCancel}>
-          Cancel
-        </button>
-      </div>
-    </form>
-  );
+            <div className="button-group">
+                <button type="submit" data-testid="submit-button">
+                    Update User
+                </button>
+                <span className="button-space"></span>
+                <button type="button" onClick={onCancel} data-testid="cancel-button">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    );
 };
 
 export default UpdateUserForm;

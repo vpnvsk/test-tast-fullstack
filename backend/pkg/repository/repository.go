@@ -4,6 +4,8 @@ import (
 	"github.com/vpnvsk/test-tast-fullstack/tree/main/backend/internal/models"
 )
 
+//go:generate mockgen -source=repository.go -destination=mocks/mock.go
+
 type Users interface {
 	CreateUser(user models.User) (int, error)
 	GetAllUser() ([]models.User, error)

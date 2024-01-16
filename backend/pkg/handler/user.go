@@ -21,7 +21,7 @@ import (
 func (h *Handler) createUser(c *gin.Context) {
 	var input models.User
 	if err := c.BindJSON(&input); err != nil {
-		//newErrorResponse(c, http.StatusBadRequest, err.Error())
+		newErrorResponse(c, http.StatusBadRequest, err.Error())
 		return
 	}
 	id, err := h.repository.CreateUser(input)
